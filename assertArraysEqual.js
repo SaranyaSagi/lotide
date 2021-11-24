@@ -1,7 +1,3 @@
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  console.log(eqArrays(arrayOne, arrayTwo) === true? "✅" : "🛑");
-};
-
 const eqArrays = function(arrayA, arrayB) {
   for (let i=0; i< arrayA.length; i++) {
     if (arrayA[i] !== arrayB[i]) {
@@ -9,8 +5,12 @@ const eqArrays = function(arrayA, arrayB) {
     }
   }
   return true;
-}
+};
+
+const assertArraysEqual = function(arrayA, arrayB) {
+  console.log(eqArrays(arrayA, arrayB) === true? "✅" : "🛑");
+};
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-//assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
 
