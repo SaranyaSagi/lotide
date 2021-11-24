@@ -29,5 +29,3 @@ const result2 = countLetters("hellooutthere");
 assertEqual(result2["h"], 2);
 assertEqual(result2["w"], undefined);
 assertEqual(result2["r"], 1);
-
-//assertEqual(result2[""], 2);
