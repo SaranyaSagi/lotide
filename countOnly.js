@@ -13,41 +13,20 @@ const assertEqual = function(actual, expected) {
 //allItems: an array of strings to look through --> array
 //itemsToCount: an object for what to count --> this will be an object
 
-//Final function, pseudo function with notes in comments
 const countOnly = function(allItems, itemsToCount) {
-    const results = {};
+  const results = {};
   
-    for (const item of allItems) {
-      if (itemsToCount[item]) {
-        if (results[item]) {
-          results[item] += 1;
-        } else {
-        results[item] = 1
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
       }
     }
-    return results;
   }
-  };
-
-// Function with notes
-// const countOnly = function(allItems, itemsToCount) {
-// //should give me count of item in allItems in an object
-//   const results = {};
-
-//   for (const item of allItems) {
-//     //console.log(item);
-//     // if (results[item]) {
-//     //   results[item] += 1; //this creates count of each
-//     if (itemsToCount[item]) {
-//       if (results[item]) {
-//         results[item] += 1;
-//       } else {
-//       results[item] = 1
-//     }
-//   }
-//   return results;
-// }
-// };
+  return results;
+};
 
 const firstNames = [
   "Karl",
@@ -62,6 +41,7 @@ const firstNames = [
 ];
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+//console.log(result1);
 //console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false }));
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
