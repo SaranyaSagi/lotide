@@ -3,7 +3,7 @@ const eqArrays = function(arrayA, arrayB) {
   //   return false;
   // }
 
-  for (let i=0; i< arrayA.length; i++) {
+  for (let i = 0; i < arrayA.length; i++) {
     if (arrayA[i] !== arrayB[i]) {
       return false;
     }
@@ -12,7 +12,7 @@ const eqArrays = function(arrayA, arrayB) {
 };
 
 const assertArraysEqual = function(arrayA, arrayB) {
-  console.log(eqArrays(arrayA, arrayB) === true? `✅ Assertion passed: ${arrayA} === ${arrayB}` : `🛑 Assertion failed: check`);
+  console.log(eqArrays(arrayA, arrayB) === true ? `✅ Assertion passed: ${arrayA} === ${arrayB}` : `🛑 Assertion failed: check`);
 };
 
 // console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
@@ -24,7 +24,7 @@ const assertArraysEqual = function(arrayA, arrayB) {
 //if array has even number of elements --> return two middles in array format/
 
 const middle = function(array) {
-  let midArr = []
+  let midArr = [];
   if (array.length === 1 || array.length === 2) {
     //let mid0Arr = []
     return midArr;
@@ -32,19 +32,19 @@ const middle = function(array) {
 
   if (array.length > 2) {
 
-   if (array.length % 2 === 0) {
+    if (array.length % 2 === 0) {
     //let mid2Arr = ["a", "b"]
-    midArr[0] = array[(array.length/2) - 1];
-    midArr[1] = array[(array.length/2)];
-    return midArr;
-  } 
+      midArr[0] = array[(array.length / 2) - 1];
+      midArr[1] = array[(array.length / 2)];
+      return midArr;
+    }
 
-  if (array.length % 1 === 0) {
+    if (array.length % 1 === 0) {
     //let mid1Arr = ["s"]
-    midArr[0] = array[(array.length - 1)/2];
-    return midArr;
+      midArr[0] = array[(array.length - 1) / 2];
+      return midArr;
+    }
   }
-}
 };
 
 // console.log(middle([1, 2, 3, 4, 5, 6]));
