@@ -13,28 +13,29 @@ const eqArrays = function(arrayA, arrayB) {
     return false;
   }
 
-  for (let i=0; i< arrayA.length; i++) {
+  for (let i = 0; i < arrayA.length; i++) {
     if (arrayA[i] !== arrayB[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
 //for 2 objects to be equal
 // - they should have same num of keys
 // - value of each key in one object is same as key from other object
 
 //1. use Object.keys and compare lengths, if not equal return false
-//2. use for..of loop through one of objects 
-//   inside loop 
+//2. use for..of loop through one of objects
+//   inside loop
 //   Compare both objects' values
-//   use === (to check types are same) 
+//   use === (to check types are same)
 //   if no match -- return false
-const eqObjects = function(object1, object2) { 
+
+const eqObjects = function(object1, object2) {
   
-  let objKeys1 = Object.keys(object1)
-  let objKeys2 = Object.keys(object2)
+  let objKeys1 = Object.keys(object1);
+  let objKeys2 = Object.keys(object2);
   if ((objKeys1.length) !== ((objKeys2.length))) {
     return false;
   }
@@ -44,7 +45,7 @@ const eqObjects = function(object1, object2) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (eqArrays(object1[key], object2[key]) === false) {
         return false; //return that specific key
-      } 
+      }
     } else if (object1[key] !== object2[key]) {
       return false;
     }
