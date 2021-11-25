@@ -20,7 +20,7 @@ const findKeyByValue = function(someObject, someValue) {
   for (const key of Object.keys(someObject)) {
     if (someObject[key] === someValue) {
       return key; //return that specific key
-    } 
+    }
   }
   return undefined;  //put this outside for loop not in else
 };
@@ -37,7 +37,7 @@ const findKeyByValue = function(someObject, someValue) {
 //   return undefined;
 // }
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
