@@ -1,19 +1,31 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+//const assertEqual = require('../assertEqual');
 const tail = require('../tail')
 
-// Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+// //Test case 2                                
+// const words = ["Yo Yo", "Lighthouse", "Labs"];
+// tail(words);
+// assertEqual(words.length, 3);
 
-//Test case 2
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
 
-//Test case 3
-const emptyArray = tail([]);  //empty array should yield empty array for its tail?
-const oneItem = tail(["one element"]);  //an array with only one element should yield an empty array for its tail
-assertEqual((emptyArray.length), 0);
-assertEqual((oneItem.length), 0);
+describe("#tail", () => {
+  it("returns 2 elements for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
+  });
+
+  it("returns 1st element as 'Lighthouse' for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], 'Lighthouse');
+  });
+
+  it("returns 2nd element is 'Labs' for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs'])[1], 'Labs'); 
+  });
+
+  it("returns empty array as tail of an empty array []", () => {
+    assert.strictEqual(tail([]).length, 0); 
+  });
+
+  it("returns empty array as tail of an array with single item ['one element']", () => {
+    assert.strictEqual(tail(['one element']).length, 0); 
+  });
+});
