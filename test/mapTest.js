@@ -2,7 +2,7 @@
 const eqArrays = require('../eqArrays');
 const assertArraysEqual = require('../assertArraysEqual');
 
-const map = require('..//map');
+const map = require('../map');
 
 //Write test cases using at least 3 different ways of using map
 //Think about different scenarios that make sense to test.
