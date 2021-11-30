@@ -7,6 +7,7 @@ const tail = require('../tail')
 // tail(words);
 // assertEqual(words.length, 3);
 
+//you cant use node for this, use npm test from test directory
 
 describe("#tail", () => {
   it("returns 2 elements for ['Hello', 'Lighthouse', 'Labs']", () => {

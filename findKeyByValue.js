@@ -1,12 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(` 🛑 Assertion Failed: ${actual} !== ${expected}`);
-    //console.log('🛑🛑🛑 Assertion Failed: ' + actual + ' !== '  + expected);
-  } else {
-    console.log(` ✅ Assertion Passed: ${actual} === ${expected}`);
-    //console.log('✅✅✅ Assertion Passed: ' + actual + ' === ' + expected);
-  }
-};
+const assertEqual = require('./assertEqual');
+
   //find and return first key that matches someValue
   //if no match -- return undefined.
   //hint use Object.keys(someObject)

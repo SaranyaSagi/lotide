@@ -2,6 +2,8 @@ const assert = require('chai').assert;
 //const assertArraysEqual = require('../assertArraysEqual')
 const middle = require('../middle');
 
+//you cant use node for this, use npm test from test directory
+
 describe("#middle", () => {
   it("returns the 2 middle numbers for even lists [1, 2, 3, 4, 5, 5, 6,]", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);

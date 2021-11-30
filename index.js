@@ -16,11 +16,11 @@ const assertArraysEqual = require('./assertArraysEqual');
 // };
 
 
-module.exports = {
-  head,
-  tail,
-  middle,
-  assertEqual,
-  eqArrays,
-  assertArraysEqual
-};
+// module.exports = {
+//   head,
+//   tail,
+//   middle,
+//   assertEqual,
+//   eqArrays,
+//   assertArraysEqual
+// };
